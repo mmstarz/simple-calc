@@ -1,0 +1,67 @@
+:root {  
+  --main-container-color-theme: linear-gradient(35deg, steelblue 20%, #42a5f5 40%, cyan 60%, steelblue 100%);
+}
+
+.app-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 4px;
+    background: var(--main-container-color-theme);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-container {
+    /* margin: 8px 0; */
+    height: calc(100vh / 2.2);
+    width: 100%;
+    display: grid;
+    /* grid-template-columns: repeat(5, [col-start] 20% [col-end]);
+    grid-template-rows: repeat(4, [col-start] 25% [col-end]);     */
+    grid-template-columns: repeat(4, [col-start] 25% [col-end]);
+    grid-template-rows: repeat(5, [col-start] 20% [col-end]); 
+    justify-content: center;
+    align-content: center;
+}
+
+.result-window {
+    width: 100%;
+    margin: 2px 0;
+    padding: 0 2px;
+    position: relative;
+}
+
+.result {
+    width: 100%;    
+    padding: 12px 20px 0px 12px;
+    text-align: right;
+    border: 0;
+    height: 60px;
+    font-weight: 600;
+}
+
+.calc_operation {
+    display: inline-block;
+    position: absolute;
+    margin: 2px;
+    right: 10px;
+}
+
+.calc_operation span {
+    margin: 0 2px;
+    font-size: 12px;
+    color: #616161;
+}
+
+@media (orientation: landscape) {
+    .buttons-container {
+        height: calc(100vh / 1.4);
+        width: 50%;
+    }
+
+    .result-window {
+        width: 50%;
+    }
+}
